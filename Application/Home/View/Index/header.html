@@ -1,0 +1,88 @@
+<header data-am-widget="header" class="am-header am-header-default am-header-fixed" style="background-color:#EDEDED;box-shadow: 1px 3px 5px #E8E8E8;">
+
+      <div class="am-header-left"  >
+      <a  href="__ROOT__/index.php"><img src="__ROOT__/Public/image/logo.png"></a>
+
+</div>
+
+
+  <div class="am-header-right am-header-nav >
+     
+
+
+
+     <empty name="myUser">
+	    
+       <!--      <a href=""></a>-->
+
+<a href="__ROOT__?s=/Home/Index/register"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">注册
+		</button></a>
+    <a href="__ROOT__?s=/Home/Index/login"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">登录
+    </button></a>
+
+         <else/>
+            <a href='__ROOT__?s=/Home/User/index' ><font size="" color="3366ff"><font size="" color="3399ff">欢迎， {$myUser}</font></font></a>
+            <a href="__ROOT__?s=/Home/Index/logout"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">注销</button></a>
+         <!--留言区-->
+       
+             <a href="__ROOT__/?s=/Home/Message/index"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">留言板</button> </a>
+
+       
+
+
+         
+         <if condition="$gid lt 7 ">
+				<!--班干部,班主任，辅导员-->
+             <if condition="$gid eq 1">
+			 <!--管理员-->
+                
+                     <a href="__ROOT__/admin/admin.php"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">后台管理</button> </a>
+                   
+
+             </if>
+
+             <div class="am-dropdown" data-am-dropdown>
+                 <button class="am-btn am-btn-default am-dropdown-toggle" data-am-dropdown-toggle>班级事务 <span class="am-icon-caret-down"></span></button>
+                 <ul class="am-dropdown-content">
+                     <li><a href="__ROOT__/?s=/Home/Class/index"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">查看本班</button> </a>
+                     </li>
+
+                     <li><a href="__ROOT__/?s=/Home/Activity/viewVote"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">发起投票</button> </a>
+                     </li>
+
+                     <li><a href="__ROOT__/?s=/Home/Activity/voteResult"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">查看投票</button> </a>
+                     </li>
+
+
+
+                 </ul>
+             </div>
+             
+                 <a href="__ROOT__/?s=/Home/Publish/index"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">发布文章</button> </a>
+             
+         </if>
+		 <if condition="$gid eq 7">
+		 <!--普通学生-->
+		 <div class="am-dropdown" data-am-dropdown>
+                 <button class="am-btn am-btn-default am-dropdown-toggle" data-am-dropdown-toggle>班级事务 <span class="am-icon-caret-down"></span></button>
+                 <ul class="am-dropdown-content">
+                     <li><a href="__ROOT__/?s=/Home/Class/index"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">查看本班</button> </a>
+                     </li>
+
+                     
+
+                     <li><a href="__ROOT__/?s=/Home/Activity/voteResult"><button class="am-btn am-btn-default am-topbar-btn am-btn-sm">查看投票</button> </a>
+                     </li>
+
+
+
+                 </ul>
+             </div>
+		 </if>
+
+    </empty>
+
+	
+  </div>
+
+</header>

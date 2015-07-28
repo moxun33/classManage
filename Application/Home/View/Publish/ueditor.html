@@ -1,0 +1,15 @@
+<script id="container" name="content" style="width:100%" type="text/plain">
+        
+    </script>
+ 
+
+<js href="__PUBLIC__/js/jquery-2.0.2.js" />
+<js href="__PUBLIC__/ueditor/ueditor.config.js" />
+<js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
+<script>
+    $(function(){
+        var ue = UE.getEditor('container',{
+            serverUrl :'{:U('Home/Publish/ueditor')}'
+    });
+    })
+</script>

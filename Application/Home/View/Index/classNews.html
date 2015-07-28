@@ -1,0 +1,41 @@
+
+<section class="am-panel am-panel-default" style="width:106%;margin-left:-3%;">
+    <header class="am-panel-hd">
+        <h3 class="am-panel-title" style="font-size: 1.5em">班级动态</h3>
+	
+    </header>
+	 <div class="am-panel-bd">
+			<div class="am-list-news-bd">
+			
+			<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+				<ul class="am-list">
+					<volist name="list" id="vo" >
+           
+
+
+						<li class="am-g am-list-item-desced">
+							<div class="am-u-sm-4 am-list-thumb">
+							<img src={$vo.img_url} alt="{$vo.title}">
+
+							</div>
+                    <div class=" am-list-main">
+                        <h3 class="am-list-item-hd">
+                            <a href="__ROOT__/?s=Home/Article/index/id/{$vo.id}">{$vo.article_title}</a>
+
+                        </h3>{$vo.publish_time}
+                        <div class="am-list-item-text">
+                            {$vo.article_content}<br/>
+                        </div>
+                    </div>
+                </li>
+           
+        </volist>
+		 </ul>
+		</div>
+	</div>
+	<!--更多在底部-->
+  <div class="am-list-news-ft">
+    <a class="am-list-news-more am-btn am-btn-default " href="###">查看更多 &raquo;</a>
+  </div>
+</div>
+</section>

@@ -1,0 +1,43 @@
+
+
+<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+
+    <div data-am-widget="list_news" class="am-g am-g-fixed"><br/>
+
+        <div class="am-panel am-panel-secondary"">
+            <div class="am-panel-hd">
+                <h2>最新动弹</h2>
+
+            </div>
+
+            <div class="am-panel-bd">
+                <ul class="am-list">
+                    <volist name="message" id="msg" empty="暂时没有数据">
+                    <li><a class="am-text-truncate" href="">{$msg.message_content}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{$msg.user_name}</li>
+                </volist>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+<ul data-am-widget="pagination" class="am-pagination am-pagination-select">
+    <li class="am-pagination-prev ">
+        <a href="#" class="">上一页</a>
+    </li>
+    <li class="am-pagination-select">
+        <select>
+            <option value="#" class="">1 / 3</option>
+            <option value="#" class="">2 / 3</option>
+            <option value="#" class="">3 / 3</option>
+        </select>
+    </li>
+    <li class="am-pagination-next ">
+        <a href="#" class="">下一页</a>
+    </li>
+</ul>
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default"
+        />
+</div>
+
+
+

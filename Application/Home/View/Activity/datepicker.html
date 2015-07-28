@@ -1,0 +1,55 @@
+<section class="am-panel am-panel-default">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title">投票有效期：</h3>
+  </header>
+  <div class="am-panel-bd">
+    <div class="am-g">
+  <div class="am-u-sm-6">
+    开始日期：<br/>
+    <p><input type="text" name="start_date" class="am-form-field"  placeholder="设置开始日期" data-am-datepicker="{format: 'yyyy-mm--dd'}"  id="my-start-2"/></p>
+  </div>
+  <div class="am-u-sm-6">
+    结束日期：<br/>
+    <p><input type="text" name="end_date" class="am-form-field" placeholder="设置结束日期" id="my-end-2" data-am-datepicker="{format: 'yyyy-mm--dd'}" /></p>
+  </div>
+</div>
+  </div>
+</section>
+   
+<script>
+    $(function() {
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+        var $myStart2 = $('#my-start-2');
+
+        var checkin = $myStart2.datepicker({
+            onRender: function(date) {
+                return date.valueOf() < now.valueOf() ? 'am-disabled' : '';
+            }
+        }).on('changeDate.datepicker.amui', function(ev) {
+            if (ev.date.valueOf() > checkout.date.valueOf()) {
+                var newDate = new Date(ev.date)
+                newDate.setDate(newDate.getDate() + 1);
+                checkout.setValue(newDate);
+            }
+            checkin.close();
+            $('#my-end-2')[0].focus();
+        }).data('amui.datepicker');
+
+        var checkout = $('#my-end-2').datepicker({
+            onRender: function(date) {
+                return date.valueOf() <= checkin.date.valueOf() ? 'am-disabled' : '';
+            }
+        }).on('changeDate.datepicker.amui', function(ev) {
+            checkout.close();
+        }).data('amui.datepicker');
+
+    })
+</script>
+
+
+
+ 
+ 
+ 
+ 

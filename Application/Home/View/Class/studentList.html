@@ -1,0 +1,35 @@
+
+<section class="am-panel am-panel-default">
+   <!-- <header class="am-panel-hd">
+        <h3 class="am-panel-title"><volist name="class_members" id="cls">{$cls.class_grade}级{$cls.class_name}&nbsp&nbsp&nbsp人数：{$cls.class_members}</volist></h3>
+    </header>-->
+    <header class="am-panel-hd">
+      
+		 <h3 class="am-panel-title">  2011级&nbsp&nbsp&nbsp信息安全1班&nbsp&nbsp&nbsp人数：50人&nbsp&nbsp&nbsp已注册：3人</h3>
+    </header>
+    <div class="am-panel-bd">
+        <table class="am-table">
+            <thead>
+            <tr>
+                
+                <th>姓名</th>
+                <th>学号</th>
+                <th>角色</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="studentList" id="all">
+             <tr>
+                <td>{$all.real_name}</td>
+                <td>{$all.student_id}</td>
+                <td>{$all.user_role}</td>
+            </tr>
+            </volist>
+
+
+          
+            </tbody>
+        </table>
+    </div>
+</section>
+

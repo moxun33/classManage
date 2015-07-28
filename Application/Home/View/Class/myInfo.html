@@ -1,0 +1,50 @@
+<table class="am-table">
+                <thead>
+
+                </thead>
+                <tbody>
+                 <volist name="myInfo" id="vo">
+				 
+                <tr>
+				<tr>
+                     <td>头像</td>
+                       <td><img src={$vo.avatar}></td>
+                </tr>
+                     <td>用户名</td>
+                       <td>{$vo.user_name}</td>
+                </tr>
+				
+				<tr>
+                    <td>姓名</td>                  
+					<td>{$vo.real_name}</td>
+                </tr>
+				<tr>
+                    <td>性别</td>                  
+					<td>{$vo.gender}</td>
+                </tr>
+               
+				<tr>
+                    <td>年级</td>
+                    <td>{$vo.user_grade}</td>
+                </tr>
+                <tr>
+                    <td>班别</td>
+                    <td>{$vo.user_class}</td>
+                </tr>
+				<tr>
+                    <td>学号（工号）</td>
+                    <td>{$vo.student_id}</td>
+                </tr>
+                <tr>
+                    <td>角色</td>
+                    <td>{$vo.user_role}</td>
+                </tr> 
+				<tr>
+                    <td>注册时间</td>
+                    <td>{$vo.reg_time}</td>
+                </tr> 
+				 </volist>
+                </tbody>
+            </table>
+
+

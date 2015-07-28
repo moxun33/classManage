@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>找班网&nbsp-&nbsp首页</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+ <link rel="alternate icon" type="image/png" href="Public/amaze-css/assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="Public/amaze-css/assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="Public/amaze-css/assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="Public/amaze-css/assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="Public/amaze-css/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="Public/amaze-css/assets/css/app.css">
+  
+ 
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+
+
+<div class="am-g ">
+    <include file="Application/Home/View/Index/header.html"/>
+</div>
+<style>
+.am-g-fixed {
+  max-width: 1180px;
+}
+</style>
+<div class="am-g am-g-fixed">
+
+
+
+    <div class="am-u-lg-8">
+            <!--图片轮播-->
+            <div class="am-g ">
+                  <include file="Application/Home/View/Index/slider.html"/>
+            </div>
+             <!--班级动态-->
+             <include file="Application/Home/View/Index/classNews.html"/>        
+    
+    </div>
+	<div class="am-u-lg-4">
+	<!--班级排行榜-->
+            <include file="Application/Home/View/Index/classList.html"/>
+
+
+    </div>
+</div>
+    <div class="am-g ">
+<!--页脚-->
+<include file="Application/Home/View/Index/footer.html"/>
+
+      </div>
+<!--回到顶部-->
+ <include file="Application/Home/View/Index/gotop.html"/>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="Public/amaze-css/assets/js/polyfill/rem.min.js"></script>
+<script src="Public/amaze-css/assets/js/polyfill/respond.min.js"></script>
+<script src="Public/amaze-css/assets/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="Public/amaze-css/assets/js/jquery.min.js"></script>
+<script src="Public/amaze-css/assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+
+</body>
+</html>

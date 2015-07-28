@@ -1,0 +1,18 @@
+<section class="am-panel am-panel-default" style="margin-top:2%;">
+    <header class="am-panel-hd">
+        <h3 class="am-panel-title">班级活跃排行榜</h3>
+    </header>
+    <div class="am-panel-bd">
+
+        <ul class="am-list">
+            <volist name="classList" id="vol" empty="暂时没有数据">
+            <li><a class="am-text-truncate" href="">{$vol.class_name}&nbsp&nbsp&nbsp活跃度：{$vol.hot_number}℃</li>
+        </volist>
+        </ul>
+		<!--更多在底部-->
+  <div class="am-list-news-ft">
+    <a class="am-list-news-more am-btn am-btn-default " href="###">查看更多 &raquo;</a>
+  </div>
+    </div>
+	
+</section>
